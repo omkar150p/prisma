@@ -156,7 +156,7 @@ jobs:
           contains(inputs.jobsToRun, '-client-')
         working-directory: packages/client
 
-      - uses: codecov/codecov-action@v3
+      - uses: codecov/codecov-action@v4
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           files: ./packages/client/src/__tests__/coverage/clover.xml
@@ -224,7 +224,7 @@ jobs:
           JEST_JUNIT_SUITE_NAME: 'client/functional'
           JEST_JUNIT_UNIQUE_OUTPUT_NAME: true
 
-      - uses: codecov/codecov-action@v3
+      - uses: codecov/codecov-action@v4
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           files: ./packages/client/src/__tests__/coverage/clover.xml
@@ -293,7 +293,7 @@ jobs:
           JEST_JUNIT_SUITE_NAME: 'client/functional'
           JEST_JUNIT_UNIQUE_OUTPUT_NAME: true
 
-      - uses: codecov/codecov-action@v3
+      - uses: codecov/codecov-action@v4
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           files: ./packages/client/src/__tests__/coverage/clover.xml
@@ -557,7 +557,7 @@ jobs:
       - run: pnpm run test src/__tests__/types/types.test.ts
         working-directory: packages/client
 
-      - uses: codecov/codecov-action@v3
+      - uses: codecov/codecov-action@v4
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           files: ./packages/client/src/__tests__/coverage/clover.xml
@@ -633,7 +633,7 @@ jobs:
       - run: pnpm run test
         working-directory: packages/integration-tests
 
-      - uses: codecov/codecov-action@v3
+      - uses: codecov/codecov-action@v4
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           files: ./packages/integration-tests/src/__tests__/coverage/clover.xml
@@ -686,7 +686,7 @@ jobs:
       - run: pnpm run test
         working-directory: packages/internals
 
-      - uses: codecov/codecov-action@v3
+      - uses: codecov/codecov-action@v4
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           files: ./packages/internals/src/__tests__/coverage/clover.xml
@@ -739,7 +739,7 @@ jobs:
       - run: pnpm run test
         working-directory: packages/migrate
 
-      - uses: codecov/codecov-action@v3
+      - uses: codecov/codecov-action@v4
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           files: ./packages/migrate/src/__tests__/coverage/clover.xml
@@ -792,7 +792,7 @@ jobs:
       - run: pnpm run test
         working-directory: packages/cli
 
-      - uses: codecov/codecov-action@v3
+      - uses: codecov/codecov-action@v4
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           files: ./packages/cli/src/__tests__/coverage/clover.xml
@@ -833,7 +833,7 @@ jobs:
       - run: pnpm run test:platform
         working-directory: packages/cli
 
-      - uses: codecov/codecov-action@v3
+      - uses: codecov/codecov-action@v4
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           files: ./packages/cli/src/__tests__/coverage/clover.xml
@@ -868,7 +868,7 @@ jobs:
         name: 'debug'
         working-directory: packages/debug
 
-      - uses: codecov/codecov-action@v3
+      - uses: codecov/codecov-action@v4
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           files: ./packages/debug/src/__tests__/coverage/clover.xml
@@ -879,7 +879,7 @@ jobs:
         name: 'generator-helper'
         working-directory: packages/generator-helper
 
-      - uses: codecov/codecov-action@v3
+      - uses: codecov/codecov-action@v4
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           files: ./packages/generator-helper/src/__tests__/coverage/clover.xml
@@ -890,7 +890,7 @@ jobs:
         name: 'get-platform'
         working-directory: packages/get-platform
 
-      - uses: codecov/codecov-action@v3
+      - uses: codecov/codecov-action@v4
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           files: ./packages/get-platform/src/__tests__/coverage/clover.xml
@@ -901,7 +901,7 @@ jobs:
         name: 'fetch-engine'
         working-directory: packages/fetch-engine
 
-      - uses: codecov/codecov-action@v3
+      - uses: codecov/codecov-action@v4
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           files: ./packages/fetch-engine/src/__tests__/coverage/clover.xml
@@ -912,7 +912,7 @@ jobs:
         name: 'engines'
         working-directory: packages/engines
 
-      - uses: codecov/codecov-action@v3
+      - uses: codecov/codecov-action@v4
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           files: ./packages/engines/src/__tests__/coverage/clover.xml
@@ -931,7 +931,7 @@ jobs:
         name: 'adapter-pg'
         working-directory: packages/adapter-pg
 
-      - uses: codecov/codecov-action@v3
+      - uses: codecov/codecov-action@v4
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           files: ./packages/adapter-planetscale/src/__tests__/coverage/clover.xml
@@ -942,7 +942,7 @@ jobs:
         name: 'instrumentation'
         working-directory: packages/instrumentation
 
-      - uses: codecov/codecov-action@v3
+      - uses: codecov/codecov-action@v4
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           files: ./packages/instrumentation/src/__tests__/coverage/clover.xml
@@ -1014,7 +1014,7 @@ jobs:
           JEST_JUNIT_SUITE_NAME: 'client/functional'
           JEST_JUNIT_UNIQUE_OUTPUT_NAME: true
 
-      - uses: codecov/codecov-action@v3
+      - uses: codecov/codecov-action@v4
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           files: ./packages/client/src/__tests__/coverage/clover.xml
@@ -1085,7 +1085,7 @@ jobs:
         env:
           JEST_JUNIT_SUITE_NAME: 'internals'
           JEST_JUNIT_UNIQUE_OUTPUT_NAME: true
-      - uses: codecov/codecov-action@v3
+      - uses: codecov/codecov-action@v4
         if: contains(inputs.jobsToRun, '-all-') || contains(inputs.jobsToRun, '-internals-')
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
@@ -1104,7 +1104,7 @@ jobs:
           NODE_OPTIONS: "${{ matrix.os == 'macos-13' && '--max-old-space-size=14336' || '--max-old-space-size=3072' }}"
           JEST_JUNIT_SUITE_NAME: 'client/old'
           JEST_JUNIT_UNIQUE_OUTPUT_NAME: true
-      - uses: codecov/codecov-action@v3
+      - uses: codecov/codecov-action@v4
         if: contains(inputs.jobsToRun, '-all-') || contains(inputs.jobsToRun, '-client-')
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
@@ -1119,7 +1119,7 @@ jobs:
         env:
           JEST_JUNIT_SUITE_NAME: 'migrate'
           JEST_JUNIT_UNIQUE_OUTPUT_NAME: true
-      - uses: codecov/codecov-action@v3
+      - uses: codecov/codecov-action@v4
         if: contains(inputs.jobsToRun, '-all-') || contains(inputs.jobsToRun, '-migrate-')
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
@@ -1134,7 +1134,7 @@ jobs:
         env:
           JEST_JUNIT_SUITE_NAME: 'cli'
           JEST_JUNIT_UNIQUE_OUTPUT_NAME: true
-      - uses: codecov/codecov-action@v3
+      - uses: codecov/codecov-action@v4
         if: contains(inputs.jobsToRun, '-all-') || contains(inputs.jobsToRun, '-cli-')
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
@@ -1149,7 +1149,7 @@ jobs:
         env:
           JEST_JUNIT_SUITE_NAME: 'debug'
           JEST_JUNIT_UNIQUE_OUTPUT_NAME: true
-      - uses: codecov/codecov-action@v3
+      - uses: codecov/codecov-action@v4
         if: contains(inputs.jobsToRun, '-all-')
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
@@ -1164,7 +1164,7 @@ jobs:
         env:
           JEST_JUNIT_SUITE_NAME: 'generator-helper'
           JEST_JUNIT_UNIQUE_OUTPUT_NAME: true
-      - uses: codecov/codecov-action@v3
+      - uses: codecov/codecov-action@v4
         if: contains(inputs.jobsToRun, '-all-')
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
@@ -1179,7 +1179,7 @@ jobs:
         env:
           JEST_JUNIT_SUITE_NAME: 'get-platform'
           JEST_JUNIT_UNIQUE_OUTPUT_NAME: true
-      - uses: codecov/codecov-action@v3
+      - uses: codecov/codecov-action@v4
         if: contains(inputs.jobsToRun, '-all-')
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
@@ -1194,7 +1194,7 @@ jobs:
         env:
           JEST_JUNIT_SUITE_NAME: 'fetch-engine'
           JEST_JUNIT_UNIQUE_OUTPUT_NAME: true
-      - uses: codecov/codecov-action@v3
+      - uses: codecov/codecov-action@v4
         if: contains(inputs.jobsToRun, '-all-')
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
@@ -1209,7 +1209,7 @@ jobs:
         env:
           JEST_JUNIT_SUITE_NAME: 'engines'
           JEST_JUNIT_UNIQUE_OUTPUT_NAME: true
-      - uses: codecov/codecov-action@v3
+      - uses: codecov/codecov-action@v4
         if: contains(inputs.jobsToRun, '-all-')
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
